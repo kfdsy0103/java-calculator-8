@@ -1,7 +1,16 @@
 package calculator;
 
+import java.math.BigInteger;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        
+        ConsoleIO consoleIO = new ConsoleIO();
+        String input = consoleIO.getInput();
+
+        StringCalculator stringCalculator = new StringCalculator();
+        BigInteger result = stringCalculator.calculateString(input);
+
+        consoleIO.displayOutput(result);
     }
 }
