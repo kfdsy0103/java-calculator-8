@@ -10,4 +10,8 @@ public class DelimiterParser {
             return input.substring(2, index - 1);
         }
     }
+
+    public String getRegex(String input) {
+        return "[" + input + "]+";
+    }
 }
