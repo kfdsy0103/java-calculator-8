@@ -1,6 +1,6 @@
 package calculator;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,7 +8,7 @@ public class StringCalculator {
 
     private String defaultDelimiters = ",:";
 
-    public BigInteger calculateString(String input) {
+    public BigDecimal calculateString(String input) {
 
         DelimiterParser delimiterParser = new DelimiterParser();
         Validator validator = new Validator();
@@ -46,10 +46,10 @@ public class StringCalculator {
     }
 
     // 문자열 숫자 리스트를 입력받아 합계를 반환하는 private 메서드
-    private BigInteger getSum(List<String> tokens) {
-        BigInteger result = BigInteger.valueOf(0);
+    private BigDecimal getSum(List<String> tokens) {
+        BigDecimal result = BigDecimal.valueOf(0);
         for (String number : tokens) {
-            result = result.add(new BigInteger(number));
+            result = result.add(new BigDecimal(number));
         }
         return result;
     }

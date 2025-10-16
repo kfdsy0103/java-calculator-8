@@ -1,7 +1,6 @@
 package calculator;
 
 import camp.nextstep.edu.missionutils.Console;
-import java.math.BigInteger;
 
 public class ConsoleIO {
 
@@ -10,7 +9,7 @@ public class ConsoleIO {
         return Console.readLine();
     }
 
-    public void displayOutput(BigInteger result) {
+    public void displayOutput(Object result) {
         System.out.println("결과 : " + result);
     }
 }

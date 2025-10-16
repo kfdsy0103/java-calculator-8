@@ -1,6 +1,6 @@
 package calculator;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Validator {
@@ -10,10 +10,10 @@ public class Validator {
     public boolean validate(List<String> tokens) {
         try {
             for (String token : tokens) {
-                BigInteger number = new BigInteger(token);
-                if (number.equals(BigInteger.ZERO)) {
+                BigDecimal number = new BigDecimal(token);
+                if (number.equals(BigDecimal.ZERO)) {
                     return false;
-                } else if (number.compareTo(BigInteger.ZERO) < 0) {
+                } else if (number.compareTo(BigDecimal.ZERO) < 0) {
                     return false;
                 }
             }
