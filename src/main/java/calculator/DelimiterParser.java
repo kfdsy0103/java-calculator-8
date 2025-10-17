@@ -7,7 +7,7 @@ public class DelimiterParser {
         if (index == -1) {
             throw new IllegalArgumentException();
         } else {
-            return input.substring(2, index - 1);
+            return input.substring(2, index);
         }
     }
 

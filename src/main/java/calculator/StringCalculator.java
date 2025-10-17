@@ -20,7 +20,7 @@ public class StringCalculator {
             // 1. 커스텀 구분자가 있는 경우, 커스텀 구분자 파싱 및 입력 문자열 갱신
             if (input.startsWith("//")) {
                 customDelimiter = delimiterParser.getCustomDelimiter(input);
-                targetString = input.substring(5 + customDelimiter.length());
+                targetString = input.substring(4 + customDelimiter.length());
             } else {
                 targetString = input;
             }
