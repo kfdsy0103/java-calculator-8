@@ -60,8 +60,9 @@ class ApplicationTest extends NsTest {
     void 매우_큰수_테스트() {
         assertSimpleTest(() -> {
             String bigNumber = "1".repeat(100);
-            run(bigNumber);
-            assertThat(output()).contains("결과 : " + bigNumber);
+            run(bigNumber + ":" + bigNumber);
+            String result = "2".repeat(100);
+            assertThat(output()).contains("결과 : " + result);
         });
     }
 
@@ -76,7 +77,7 @@ class ApplicationTest extends NsTest {
     @Test
     void 구분자만_사용_테스트() {
         assertSimpleTest(() -> {
-            run("::,,:,:,");
+            run("//;\\n::,;,;:,;:;;;,");
             assertThat(output()).contains("결과 : 0");
         });
     }
