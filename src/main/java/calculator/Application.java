@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class Application {
     public static void main(String[] args) {
-
         ConsoleIO consoleIO = new ConsoleIO();
         String input = consoleIO.getInput();
 
