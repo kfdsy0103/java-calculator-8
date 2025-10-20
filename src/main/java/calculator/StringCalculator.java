@@ -48,8 +48,8 @@ public class StringCalculator {
     /**
      * 문자열 숫자 리스트를 입력받아 합계를 반환합니다.
      *
-     * @param : 숫자 문자열 리스트
-     * @return : 합계
+     * @param tokens 숫자 문자열 리스트
+     * @return 합계
      */
     private BigDecimal getSum(List<String> tokens) {
         BigDecimal result = BigDecimal.valueOf(0);
